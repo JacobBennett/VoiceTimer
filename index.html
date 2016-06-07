@@ -76,15 +76,9 @@
    <h4>SAY "SET TIMER FOR" THEN NUMBER OF SECONDS.</h4>
 </div>
 
-<div class="attributions">
-  <a href="http://codepen.io/glaubersampaio/pen/vOZbPx">Timer UI</a> by <a href="http://codepen.io/glaubersampaio/">Gláuber Sampaio</a>
-</div>
-
-
-
-
-
-
+  <div class="attributions">
+    <a href="http://codepen.io/glaubersampaio/pen/vOZbPx">Timer UI</a> by <a href="http://codepen.io/glaubersampaio/">Gláuber Sampaio</a>
+  </div>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js "></script>
@@ -98,7 +92,7 @@
         end: new Audio('sounds/beep_double_down.wav'),
       };
 
-      var setTimer = function(seconds){
+      var handleVoice = function(seconds){
         sounds.recognize.play();
         startTimerDelay(seconds);
       }
@@ -115,7 +109,7 @@
       var main = function() {
 
           var commands = {
-            'set timer for :seconds seconds': setTimer
+            'set timer for :seconds seconds': handleVoice
           };
 
           annyang.addCommands(commands);
