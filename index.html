@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Super Simple Voice Timer</title>
     <link rel="stylesheet" href="css/styles.css">
-    </style>
   </head>
   <body>
-  
+
+<style>
+
+</style>
+
   <div class="timer">
    <h3>COUNTDOWN</h3>
    <div class="timer--clock">
@@ -73,11 +77,19 @@
          </div>
       </div>
    </div>
-   <h4>SAY "SET TIMER FOR" THEN NUMBER OF SECONDS.</h4>
+   <div class="alert">
+    <div class="alert__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve"><g><g><path fill="#fff" d="M42,57c-8.822,0-16-7.178-16-16c0-1.104,0.896-2,2-2s2,0.896,2,2c0,6.617,5.383,12,12,12s12-5.383,12-12    c0-1.104,0.896-2,2-2s2,0.896,2,2C58,49.822,50.822,57,42,57z"/></g><g><path fill="#fff" d="M42,50c-4.963,0-9-4.037-9-9V25c0-4.963,4.037-9,9-9s9,4.037,9,9v16C51,45.963,46.963,50,42,50z M42,20    c-2.757,0-5,2.243-5,5v16c0,2.757,2.243,5,5,5s5-2.243,5-5V25C47,22.243,44.757,20,42,20z"/></g><g><path fill="#fff" d="M42,65c-1.104,0-2-0.896-2-2v-8c0-1.104,0.896-2,2-2s2,0.896,2,2v8C44,64.104,43.104,65,42,65z"/></g><g><path fill="#fff" d="M47,66H37c-1.104,0-2-0.896-2-2s0.896-2,2-2h10c1.104,0,2,0.896,2,2S48.104,66,47,66z"/></g></g></svg>
+    </div>
+    <div class="alert__text">
+      Say "Set Timer For" then the number of seconds...
+    </div>
+  </div>
 </div>
 
   <div class="attributions">
-    <a href="http://codepen.io/glaubersampaio/pen/vOZbPx">Timer UI</a> by <a href="http://codepen.io/glaubersampaio/">Gláuber Sampaio</a>
+    <a href="http://codepen.io/glaubersampaio/pen/vOZbPx">Timer UI</a> by <a href="http://codepen.io/glaubersampaio/">Gláuber Sampaio</a><br/>
+    Microphone by Golden Roof from the <a href="https://thenounproject.com">Noun Project</a>
   </div>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

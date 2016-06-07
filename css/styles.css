@@ -129,9 +129,32 @@ body {
   position: absolute;
   bottom: 1em;
   right: 1em;
+  text-align: right;
+  line-height: 1.5em;
+  font-size: 0.75em;
 }
 
 a {color: #0D47A1;}
 a:visited {color: #0D47A1;}
 a:hover {color: #0D47A1;}
 a:active {color: #0D47A1;}
+
+.alert {
+    width: auto;
+    background-color: #1976D2;
+    border-radius: 2em;
+    width: auto;
+    padding-right: 1.25em;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 1.25em auto;
+    width: 80%;
+}
+
+.alert__icon {
+  width: 3em;
+}
