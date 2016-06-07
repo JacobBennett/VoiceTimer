@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: "Lato";
+      }
+
+      h1 {}
+    </style>
+  </head>
+  <body>
+  <h1 id="timer">timer</h1>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js "></script>
+    <script>
+      var sounds = {
+        recognize: new Audio('sounds/beep_double_up.wav'),
+        beep: new Audio('sounds/beep_echo_lo.wav'),
+        start: new Audio('sounds/beep_echo_hi.wav'),
+        end: new Audio('sounds/beep_double_down.wav'),
+      };
+
+      var setTimer = function(seconds){
+        console.log(seconds);
+        sounds.recognize.play();
+        startTimerDelay(seconds);
+        $('#timer').text(seconds);
+      }
+
+      var startTimerDelay = function(seconds) {
+        setTimeout(function() {
+          sounds.beep.pause();
+          sounds.currentTime = 0;
+          sounds.start.play();
+        }, 1000);
+
+        setTimeout(function(){
+          sounds.end.play();
+        }, (seconds*1000) + 1000);
+      };
+
+      var main = function() {
+
+
+          var commands = {
+            'set timer for :seconds seconds': setTimer
+          };
+
+          annyang.addCommands(commands);
+          annyang.start();
+
+        };
+
+      $(document).ready(main);
+    </script>
+  </body>
+</html>
