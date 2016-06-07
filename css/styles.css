@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background: #2196F3;
+  color: white;
+}
+
+/*=================
+* TIMER
+*=================*/
+.timer {
+  width: 550px;
+  height: 248px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -275px;
+  margin-top: -124px;
+  color: white;
+}
+.timer * {
+  cursor: default;
+}
+.timer h3 {
+  width: 100%;
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.timer--clock {
+  width: 100%;
+  position: relative;
+  padding-left: 6px;
+  margin-top: 22px;
+  overflow: hidden;
+}
+.timer--clock .clock-display-grp {
+  width: 100%;
+  position: relative;
+}
+.timer--clock .clock-display-grp .number-grp {
+  width: auto;
+  display: block;
+  height: 156px;
+  float: left;
+  overflow: hidden;
+}
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp {
+  width: 100%;
+  position: relative;
+}
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp .num {
+  width: 100%;
+  position: relative;
+  height: 156px;
+}
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp .num p {
+  width: auto;
+  display: table;
+  font-size: 205px;
+  line-height: 150px;
+  font-weight: bold;
+}
+.timer--clock .clock-separator {
+  width: auto;
+  float: left;
+  display: block;
+  height: 156px;
+}
+.timer--clock .clock-separator p {
+  width: auto;
+  display: table;
+  font-size: 205px;
+  line-height: 150px;
+  font-weight: bold;
+}
+.timer h4 {
+  width: 100%;
+  font-size: 10px;
+  letter-spacing: 6px;
+  text-align: center;
+  padding-top: 25px;
+  float: left;
+}
+
+.reload {
+  width: 125px;
+  height: 14px;
+  position: absolute;
+  bottom: 50vh;
+  left: 50%;
+  margin-left: -62.5px;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+.reload:hover svg path {
+  fill: #666666;
+}
+.reload:hover p {
+  color: #666666;
+}
+.reload svg {
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-right: 10px;
+}
+.reload p {
+  color: #2b2b2b;
+  font-size: 12px;
+  float: left;
+  line-height: 11px;
+}
+
+.attributions {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+a {color: #0D47A1;}
+a:visited {color: #0D47A1;}
+a:hover {color: #0D47A1;}
+a:active {color: #0D47A1;}
