@@ -2,4 +2,4 @@
 
 A quick voice activated timer I threw together to help with timed workout intervals.
 
-![voice timer](readme_assets/timer.jpg "Voice Timer")
+![voice timer](readme_assets/timer.png "Voice Timer")
