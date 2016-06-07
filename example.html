@@ -15,6 +15,7 @@
   <h1 id="timer">timer</h1>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js "></script>
+  <script src="js/AccurateTimer.min.js"></script>
     <script>
       var sounds = {
         recognize: new Audio('sounds/beep_double_up.wav'),
@@ -23,18 +24,24 @@
         end: new Audio('sounds/beep_double_down.wav'),
       };
 
+      var timer = new AccurateTimer(function tick() {
+              console.log('tick');
+              this.stop();
+          }, 1000);
+
       var setTimer = function(seconds){
-        console.log(seconds);
         sounds.recognize.play();
+
         startTimerDelay(seconds);
+
         $('#timer').text(seconds);
       }
 
       var startTimerDelay = function(seconds) {
+
         setTimeout(function() {
-          sounds.beep.pause();
-          sounds.currentTime = 0;
           sounds.start.play();
+          timer.start();
         }, 1000);
 
         setTimeout(function(){
