@@ -112,18 +112,16 @@
       }
 
       var startTimerDelay = function(timer_seconds) {
-
-        setTimeout(function() {
-          sounds.start.play();
-          initTimer("00:" + timer_seconds);
-        }, 1000);
-
+        sounds.start.play();
+        initTimer("00:" + timer_seconds);
       };
 
       var main = function() {
 
           var commands = {
-            'set timer for :seconds seconds': handleVoice
+            'set timer for :seconds seconds': handleVoice,
+            'pause timer': pauseTimer,
+            'resume timer': resumeTimer
           };
 
           annyang.addCommands(commands);
