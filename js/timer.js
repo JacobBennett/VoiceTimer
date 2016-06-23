@@ -85,6 +85,14 @@ function initTimer (t) {
 
 }
 
+function pauseTimer () {
+  isRunning = false;
+}
+
+function resumeTimer () {
+  isRunning = true;
+}
+
 function countdownFinished() {
    setTimeout(function () {
        $(document).trigger('countdownFinished');

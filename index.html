@@ -119,7 +119,9 @@
       var main = function() {
 
           var commands = {
-            'set timer for :seconds seconds': handleVoice
+            'set timer for :seconds seconds': handleVoice,
+            'pause timer': pauseTimer,
+            'resume timer': resumeTimer
           };
 
           annyang.addCommands(commands);
