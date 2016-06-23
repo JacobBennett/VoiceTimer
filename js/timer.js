@@ -86,10 +86,12 @@ function initTimer (t) {
 }
 
 function pauseTimer () {
+  sounds.beep.play();
   isRunning = false;
 }
 
 function resumeTimer () {
+  sounds.start.play();
   isRunning = true;
 }
 

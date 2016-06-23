@@ -108,13 +108,8 @@
 
       var handleVoice = function(seconds){
         sounds.recognize.play();
-        startTimerDelay(seconds);
+        initTimer("00:" + seconds);
       }
-
-      var startTimerDelay = function(timer_seconds) {
-        sounds.start.play();
-        initTimer("00:" + timer_seconds);
-      };
 
       var main = function() {
 
