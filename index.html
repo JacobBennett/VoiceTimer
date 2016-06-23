@@ -112,12 +112,8 @@
       }
 
       var startTimerDelay = function(timer_seconds) {
-
-        setTimeout(function() {
-          sounds.start.play();
-          initTimer("00:" + timer_seconds);
-        }, 1000);
-
+        sounds.start.play();
+        initTimer("00:" + timer_seconds);
       };
 
       var main = function() {

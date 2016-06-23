@@ -2,9 +2,14 @@ TweenLite.defaultEase = Expo.easeOut;
 
 // initTimer("00:11"); // other ways --> "0:15" "03:5" "5:2"
 
-var timerEl = document.querySelector('.timer');
+var timerEl = document.querySelector('.timer'),
+    isRunning = true,
+    timer;
 
 function initTimer (t) {
+
+   clearTimeout(timer);
+   isRunning = true;
    
    var self = this,
        timerEl = document.querySelector('.timer'),
@@ -30,29 +35,31 @@ function initTimer (t) {
 
    function updateTimer() {
 
-      var timestr;
-      var date = new Date();
+      if (isRunning) {
+        var timestr;
+        var date = new Date();
 
-      date.setHours(0);
-      date.setMinutes(time.min);
-      date.setSeconds(time.sec);
+        date.setHours(0);
+        date.setMinutes(time.min);
+        date.setSeconds(time.sec);
 
-      var newDate = new Date(date.valueOf() - 1000);
-      var temp = newDate.toTimeString().split(" ");
-      var tempsplit = temp[0].split(':');
+        var newDate = new Date(date.valueOf() - 1000);
+        var temp = newDate.toTimeString().split(" ");
+        var tempsplit = temp[0].split(':');
 
-      time.min = tempsplit[1];
-      time.sec = tempsplit[2];
+        time.min = tempsplit[1];
+        time.sec = tempsplit[2];
 
-      timestr = time.min + time.sec;
-      timeNumbers = timestr.split('');
-      updateTimerDisplay(timeNumbers);
+        timestr = time.min + time.sec;
+        timeNumbers = timestr.split('');
+        updateTimerDisplay(timeNumbers);
+      }
 
       if(timestr === '0000')
          countdownFinished();
 
       if(timestr != '0000')
-         setTimeout(updateTimer, 1000);
+         timer = setTimeout(updateTimer, 1000);
 
    }
 
@@ -74,7 +81,7 @@ function initTimer (t) {
 
    }
    
-   setTimeout(updateTimer, 1000);
+   updateTimer();
 
 }
 
